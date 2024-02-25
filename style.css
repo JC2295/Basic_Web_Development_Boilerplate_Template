@@ -4,13 +4,9 @@
     padding: 0;
 }
 
-
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
-    .gfg-div {
-        background-color: #63c971;
-        color: #fff;
-    }
+    
 }
  
 /* For Tablet View */
@@ -18,7 +14,6 @@
     and (max-device-width: 1024px) {
     
 }
-
 
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
