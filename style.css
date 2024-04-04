@@ -1,21 +1,108 @@
+/*--------------------*/
+/*  Global Variables  */
+/*--------------------*/
+:root{
+    /*--------------------*/
+    /*  Color variables   */
+    /*--------------------*/
+    --primary-color: ;
+    --secondary-color: ;
+    --information-color: ;
+    --postive-color: ;
+    --negative-color: ;
+
+
+    /*--------------------*/
+    /*Typography Variables*/
+    /*--------------------*/
+    --font-style: ;
+    --homepage-heading-size: ;
+
+    /*Desktop*/
+    --desktop-heading-font-size: ;
+    --desktop-sub-heading-font-size: ;
+    --desktop-body-font-size: ;
+    
+    /*Tablet*/
+    --tablet-heading-font-size: ;
+    --tablet-sub-heading-font-size: ;
+    --tablet-body-font-size: ;
+
+    /*Mobile*/
+    --mobile-heading-font-size: ;
+    --mobile-sub-heading-font-size: ;
+    --mobile-body-font-size: ;
+}
+
+
+/*------------------------*/
+/*  Universal Properties  */
+/*------------------------*/
 *{
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
 }
 
+/*------------------------*/
+/*    Utility Classes     */
+/*------------------------*/
+
+
+
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+/*------------------------*/
+/*    Media queries       */
+/*------------------------*/
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
-    
+    h1{
+        font-size: var(--desktop-heading-font-size);
+    }
+
+    h2{
+        font-size: var(--desktop-sub-heading-font-size);
+    }
+
+    p{
+        font-size: var(--desktop-body-font-size);
+    }   
 }
  
 /* For Tablet View */
 @media screen and (min-device-width: 768px) 
     and (max-device-width: 1024px) {
-    
+    h1{
+        font-size: var(--tablet-heading-font-size);
+    }
+
+    h2{
+        font-size: var(--tablet-sub-heading-font-size);
+    }
+
+    p{
+        font-size: var(--tablet-body-font-size);
+    }   
 }
 
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
-    
+    h1{
+        font-size: var(--mobile-heading-font-size);
+    }
+
+    h2{
+        font-size: var(--mobile-sub-heading-font-size);
+    }
+
+    p{
+        font-size: var(--mobile-body-font-size);
+    }   
 }
