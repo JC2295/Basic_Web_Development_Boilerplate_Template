@@ -56,6 +56,14 @@ html{
     overflow:hidden;
 }
 
+.grid-container{
+    display: grid;
+}
+
+.flex-container{
+    display: flex;
+}
+
 /*------------------------*/
 /*    General Styling     */
 /*------------------------*/
@@ -76,39 +84,35 @@ body{
     scroll-snap-align: start;
 }
 
-header{
-    width: 100%;
-}
-
 /*This defines the styling for the homepage heading which may take up the whole screen*/
-#home-heading{
+#home-heading-text{
     font-size: var(--large-heading-size);
 }
 
-img{
+.image{
     max-width: 100%;
     height: auto;
 }
 
-nav li{
+.nav-bar-list-item{
     list-style-type: none;
 }
 
-a{
+.nav-bar-link-item{
     text-decoration: none;
 }
 
-h1{
+.heading-text{
     font-size: var(--heading-font-size);
     font-family: var(--heading-font-syle);
 }
 
-h2{
+.sub-heading-text{
     font-size: var(--sub-heading-font-size);
     font-family: var(--heading-font-syle);
 }
 
-p{
+.body-text{
     font-size: var(--body-font-size);
     font-family: var(--body-font-syle);
 }  
@@ -122,6 +126,10 @@ p{
     html{
         font-size: 20px;
     }
+
+    body{
+        padding: 1rem
+    }
 }
  
 /* For Tablet View */
@@ -129,7 +137,11 @@ p{
     and (max-device-width: 1024px) {
     html{
         font-size: 16px;
-   }
+    }
+
+   body{
+        padding: 0.5rem
+    }
 }
 
 /* For Mobile Phones Portrait or Landscape View */
@@ -137,4 +149,8 @@ p{
     html{
         font-size: 16px;
     } 
+
+    body{
+        padding: 0rem;
+    }
 }
