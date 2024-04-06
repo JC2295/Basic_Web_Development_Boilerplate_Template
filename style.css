@@ -5,35 +5,32 @@
     /*--------------------*/
     /*  Color variables   */
     /*--------------------*/
-    --primary-color: ;
-    --secondary-color: ;
-    --information-color: ;
-    --postive-color: ;
-    --negative-color: ;
-
+    --primary-color: blue;
+    --secondary-color: green;
+    --accent-color: azure;
+    --neutral-color: darkgrey; /*Used for text color and white space*/
 
     /*--------------------*/
     /*Typography Variables*/
     /*--------------------*/
-    --font-style: ;
-    --homepage-heading-size: ;
+    --body-font-style: Helvetica;
+    --heading-font-syle: Helvetica;
 
-    /*Desktop*/
-    --desktop-heading-font-size: ;
-    --desktop-sub-heading-font-size: ;
-    --desktop-body-font-size: ;
-    
-    /*Tablet*/
-    --tablet-heading-font-size: ;
-    --tablet-sub-heading-font-size: ;
-    --tablet-body-font-size: ;
-
-    /*Mobile*/
-    --mobile-heading-font-size: ;
-    --mobile-sub-heading-font-size: ;
-    --mobile-body-font-size: ;
+    /*Font Sizes*/
+    --large-heading-size: 4rem;
+    --heading-font-size: 3rem;
+    --sub-heading-font-size: 2rem;
+    --body-font-size: 1rem;
+    --nav-bar-font-size: 1rem;
+    --figcaption-font-size: 0.75rem
 }
 
+/*------------------------*/
+/*    HTML Properties     */
+/*------------------------*/
+html{
+    font-size: 16px;
+}
 
 /*------------------------*/
 /*  Universal Properties  */
@@ -42,19 +39,82 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 /*------------------------*/
 /*    Utility Classes     */
 /*------------------------*/
 
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
 
 
+/*------------------------*/
+/*    General Styling     */
+/*------------------------*/
+body{
+    min-width: 320px;
+    max-width: 1920px;
+    background-color: var(--neutral-color);
+}
+
+/*Defines scroll snap behavoir for container element with this class*/ 
+.scroller {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+ 
+/*Any element with this class will be designated as a scroll snap point*/
+.scroller-snap-point {
+    scroll-snap-align: start;
+}
+
+header{
+    width: 100%;
+}
+
+#home-heading{
+    font-size: var(--large-heading-size);
+}
 
 img{
     max-width: 100%;
     height: auto;
 }
+
+nav li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    font-size: var(--heading-font-size);
+    font-family: var(--heading-font-syle);
+}
+
+h2{
+    font-size: var(--sub-heading-font-size);
+    font-family: var(--heading-font-syle);
+}
+
+p{
+    font-size: var(--body-font-size);
+    font-family: var(--body-font-syle);
+}  
+
+
+
+
 
 
 
@@ -63,46 +123,22 @@ img{
 /*------------------------*/
 /* For Desktop View */
 @media screen and (min-width: 1024px) {
-    h1{
-        font-size: var(--desktop-heading-font-size);
+    html{
+        font-size: 20px;
     }
-
-    h2{
-        font-size: var(--desktop-sub-heading-font-size);
-    }
-
-    p{
-        font-size: var(--desktop-body-font-size);
-    }   
 }
  
 /* For Tablet View */
 @media screen and (min-device-width: 768px) 
     and (max-device-width: 1024px) {
-    h1{
-        font-size: var(--tablet-heading-font-size);
-    }
-
-    h2{
-        font-size: var(--tablet-sub-heading-font-size);
-    }
-
-    p{
-        font-size: var(--tablet-body-font-size);
-    }   
+    html{
+        font-size: 16px;
+   }
 }
 
 /* For Mobile Phones Portrait or Landscape View */
 @media screen and (max-device-width: 640px) {
-    h1{
-        font-size: var(--mobile-heading-font-size);
-    }
-
-    h2{
-        font-size: var(--mobile-sub-heading-font-size);
-    }
-
-    p{
-        font-size: var(--mobile-body-font-size);
-    }   
+    html{
+        font-size: 16px;
+    } 
 }
