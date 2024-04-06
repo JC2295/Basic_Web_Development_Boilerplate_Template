@@ -46,6 +46,7 @@ html{
 /*    Utility Classes     */
 /*------------------------*/
 
+/*Any content using this class willl be hidden from view and used by screenreaders only*/
 .sr-only {
     position:absolute;
     left:-10000px;
@@ -54,7 +55,6 @@ html{
     height:1px;
     overflow:hidden;
 }
-
 
 /*------------------------*/
 /*    General Styling     */
@@ -66,7 +66,7 @@ body{
 }
 
 /*Defines scroll snap behavoir for container element with this class*/ 
-.scroller {
+.scroller-snap-container {
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
 }
@@ -80,6 +80,7 @@ header{
     width: 100%;
 }
 
+/*This defines the styling for the homepage heading which may take up the whole screen*/
 #home-heading{
     font-size: var(--large-heading-size);
 }
@@ -111,11 +112,6 @@ p{
     font-size: var(--body-font-size);
     font-family: var(--body-font-syle);
 }  
-
-
-
-
-
 
 
 /*------------------------*/
